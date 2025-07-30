@@ -1,0 +1,41 @@
+let Employes=[];
+
+function addEmp(id,name,salary=true){
+    employes.push(({id,name,salary}));
+    console.log("Employe added",employees);
+}
+addEmp(1,"kowsi",20000)
+addEmp(2,"mithra",300000)
+addEmp(3,"yaalu",400)
+
+
+//to update
+function updateEmp(id,newDetail){
+    const emp=employes.find(e=>e.id==id)
+    if(emp){
+        Object.assign(emp,newDetail);
+        console.log("updated",employes)
+
+    }else{
+        console.log("employe not found")
+    }
+}
+updateEmp(3,{name:"joe"})
+
+//delete 
+function removeEmp(id){
+    const (index!==-1){
+        employes.splice(index,id)
+        console.log("employes removed",employes)
+    }else{
+        console.log("employe not found");
+    }
+}
+removeEmp(1)
+
+//calculate total salary
+function totalSalary(){
+    const total=employes.reduce((sum,emp)=>sum+emp.salary,0);
+    console.log("toal salary is",total);
+}
+totalSalary()
