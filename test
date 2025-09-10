@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text="aaba";
+        let pattern=/\a/g;
+        let pattern2=/\a+/g;
+        let pattern3=/\a?/g;
+        let result=text.match(pattern);
+        let result2=text.match(pattern2);
+        let result3=text.match(pattern3);
+        console.log(result)
+        console.log(result2)
+        console.log(result3)
+
+        let sentence="hai hello\nhaii,I'm fine"
+        let pattern4=/^\hai+/igm;
+        let result5=sentence.match(pattern4);
+        console.log(result5)
+         
+
+        let digitchar="Js001";
+        let pattern6=/\d+\w/g;
+        let result6=digitchar.match(pattern6);
+        console.log(result6);
+
+
+        let username="javascript program"
+        let pattern7=/(\w+)/g;
+        let result7=username.match(pattern7);
+        console.log(result7);
+        console.log(result7[0]);
+        console.log(result7[1])
+
+       //common regex method
+       //test->return true or false
+       //exec()->return the match wi groups
+
+       let lines="purple brown grey black";
+       let pattern9=/brown/;
+       console.log(pattern9.test(line));
+       
+    </script>
+</body>
+</html>
